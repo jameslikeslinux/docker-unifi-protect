@@ -1,5 +1,7 @@
 # UniFi Protect for Docker (x86_64)
 
+**!!! PRONE TO CRASHING.  NOT RECOMMENDED !!!**
+
 This is a slightly hacky x86_64-compatible build of UniFi Protect, which is
 normally only available for the ARMv8-based CloudKey.  The image is based on
 x86_64 Ubuntu, but contains ARMv8 system libraries and `qemu-aarch64` to
