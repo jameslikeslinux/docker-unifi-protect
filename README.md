@@ -59,7 +59,8 @@ docker volume create unifi-protect-postgresql
 On a typical Docker installation, you will have access to this volume from the
 host at `/var/lib/docker/volumes/unifi-protect/_data`.
 
-Optionally, if you want to store the bulk video data on a larger device, create the volume like:
+Optionally, if you want to store the bulk video data on a larger device, create
+the volume like:
 
 ```
 docker volume create -o type=none -o o=bind -o device=/path/to/some/empty/dir unifi-protect
@@ -76,5 +77,9 @@ docker run \
   --ip 192.168.100.2 \
   -v unifi-protect:/srv/unifi-protect \
   -v unifi-protect-postgresql:/var/lib/postgresql \
+  --sysctl net.ipv4.ip_unprivileged_port_start=0 \
   iamjamestl/unifi-protect
 ```
+
+After a minute or so for the service to start, visit
+http://<ip-of-the-container>/.
