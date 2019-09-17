@@ -8,9 +8,10 @@ FROM ubuntu:18.04
 RUN apt-get update
 
 # Install build tools
-RUN apt-get install -y qemu-user wget xz-utils
+RUN apt-get install -y wget xz-utils
 
-# Install arm64 libraries
+# Install arm64 compatibility
+COPY qemu-aarch64 /usr/bin/qemu-aarch64
 RUN wget --progress=dot:mega https://cloud-images.ubuntu.com/releases/bionic/release/ubuntu-18.04-server-cloudimg-arm64-root.tar.xz -O ubuntu-arm64.tar.xz \
  && tar -xvf ubuntu-arm64.tar.xz lib/ld-linux-aarch64.so.1 lib/aarch64-linux-gnu usr/lib/aarch64-linux-gnu \
  && rm ubuntu-arm64.tar.xz
