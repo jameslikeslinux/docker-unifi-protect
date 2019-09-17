@@ -65,6 +65,8 @@ Optionally, if you want to store the bulk video data on a larger device, create 
 docker volume create -o type=none -o o=bind -o device=/path/to/some/empty/dir unifi-protect
 ```
 
+### Execution
+
 Finally, run the container as follows:
 
 ```
