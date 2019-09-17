@@ -82,4 +82,4 @@ docker run \
 ```
 
 After a minute or so for the service to start, visit
-http://&lt;ip-of-the-container&gt;:7080/.
+`http://<ip-of-the-container>:7080/`.
