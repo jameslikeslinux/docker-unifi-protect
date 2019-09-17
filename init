@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# UniFi Protect Docker Init
+# Copyright (C) 2019 James T. Lee
+#
+# Starts the unifi-protect service and its database
+#
+
+pg_ctlcluster 10 main start
+unifi-protect
+pg_ctlcluster 10 main stop
