@@ -1,8 +1,4 @@
 {
-  "ports": {
-    "http": 80,
-    "https": 443
-  },
   "backupPaths": [
     "/srv/unifi-protect/backups"
   ]

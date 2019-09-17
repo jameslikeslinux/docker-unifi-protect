@@ -77,9 +77,9 @@ docker run \
   --ip 192.168.100.2 \
   -v unifi-protect:/srv/unifi-protect \
   -v unifi-protect-postgresql:/var/lib/postgresql \
-  --sysctl net.ipv4.ip_unprivileged_port_start=0 \
+  --tmpfs /tmp \
   iamjamestl/unifi-protect
 ```
 
 After a minute or so for the service to start, visit
-http://<ip-of-the-container>/.
+http://&lt;ip-of-the-container&gt;:7080/.
