@@ -74,3 +74,12 @@ docker run \
 
 After a minute or so for the service to start, visit
 `http://<ip-of-the-container>:7080/`.
+
+If you need to jump into the running container, do so with the `resin-xbuild`
+wrapper like:
+
+```
+docker exec -it unifi-protect resin-xbuild -c bash
+```
+
+Otherwise, you will get an "unknown format" error.
