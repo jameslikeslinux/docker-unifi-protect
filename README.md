@@ -1,11 +1,9 @@
 # UniFi Protect for Docker (x86_64)
 
-**!!! PRONE TO CRASHING.  NOT RECOMMENDED !!!**
-
 This is a slightly hacky x86_64-compatible build of UniFi Protect, which is
 normally only available for the ARMv8-based CloudKey.  The image is based on
-x86_64 Ubuntu, but contains ARMv8 system libraries and `qemu-aarch64` to
-perform user-mode emulation of ARMv8.  Performance is reasonable.
+ARMv8 Ubuntu, but contains `qemu-aarch64` to perform user-mode emulation of
+ARMv8.  Performance is reasonable.
 
 This image is modeled after my
 [other](https://github.com/iamjamestl/docker-unifi)
@@ -20,16 +18,7 @@ time depending on where Ubiquiti takes things.  Use at your own risk.
 
 ### Host Configuration
 
-In order for your kernel to know how to execute the ARMv8 binaries contained in
-this image, you must register the format on your Docker host.  Create the file
-`/etc/binfmt.d/qemu-aarch64.conf` containing:
-
-```
-:aarch64:M::\x7fELF\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\xb7:\xff\xff\xff\xff\xff\xff\xff\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff:/usr/bin/qemu-aarch64:
-```
-
-and run `systemctl restart systemd-binfmt`.  If you aren't using systemd,
-you're on your own.
+This image should work out-of-the-box on a Linux x86_64 Docker host.
 
 ### Network
 
