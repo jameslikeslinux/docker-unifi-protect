@@ -28,11 +28,6 @@ RUN ln -s /srv/unifi-protect/logs /var/log/unifi-protect \
  && chown unifi-protect:unifi-protect /srv/unifi-protect /srv/unifi-protect/backups /var/run/unifi-protect \
  && ln -s /tmp /srv/unifi-protect/temp
 
-# Disable aarch64 on x86_64
-# Compatibility for running the app will come from the resin-xbuild wrapper
-# entrypoint.
-RUN ["cross-build-end"]
-
 # Configure
 COPY config.json /etc/unifi-protect/config.json
 
@@ -40,5 +35,4 @@ COPY config.json /etc/unifi-protect/config.json
 COPY init /init
 CMD ["/init"]
 
-# Run everything with this qemu-aarch64 wrapper around /bin/sh
-ENTRYPOINT ["/usr/bin/resin-xbuild", "-c"]
+ENTRYPOINT ["/bin/sh", "-c"]
