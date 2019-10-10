@@ -35,4 +35,5 @@ COPY config.json /etc/unifi-protect/config.json
 COPY init /init
 CMD ["/init"]
 
+# Use /bin/sh which is still a qemu-aarch64 wrapper from cross-build-start
 ENTRYPOINT ["/bin/sh", "-c"]
