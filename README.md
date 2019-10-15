@@ -9,6 +9,9 @@ This image is modeled after my
 complicated port and user mapping by expecting to be attached directly to your
 network and using named volumes.
 
+**WARNING**: This is a wholly unsupported build and it may stop working at any
+time depending on where Ubiquiti takes things.  Use at your own risk.
+
 ## Usage
 
 ### Host Configuration
