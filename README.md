@@ -63,7 +63,7 @@ docker run \
   --ip 192.168.100.2 \
   -v unifi-protect:/srv/unifi-protect \
   -v unifi-protect-postgresql:/var/lib/postgresql \
-  --tmpfs /srv/unifi-protect/temp \
+  --tmpfs /tmp \
   iamjamestl/unifi-protect
 ```
 

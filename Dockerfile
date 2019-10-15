@@ -24,7 +24,8 @@ RUN pg_ctlcluster 10 main start \
  && pg_ctlcluster 10 main stop \
  && ln -s /srv/unifi-protect/logs /var/log/unifi-protect \
  && mkdir /srv/unifi-protect /srv/unifi-protect/backups /var/run/unifi-protect \
- && chown unifi-protect:unifi-protect /srv/unifi-protect /srv/unifi-protect/backups /var/run/unifi-protect
+ && chown unifi-protect:unifi-protect /srv/unifi-protect /srv/unifi-protect/backups /var/run/unifi-protect \
+ && ln -s /tmp /srv/unifi-protect/temp
 
 # Configure
 COPY config.json /etc/unifi-protect/config.json
