@@ -5,7 +5,7 @@ x86_64.  Normally it is only available for the Cloud Key Gen2.
 
 This image is modeled after my
 [other](https://github.com/iamjamestl/docker-unifi)
-[images](https://github.com/iamjamestl/docker-unifi-video), which eliminate
+[images](https://github.com/iamjamestl/docker-unifi-video) which eliminate
 complicated port and user mapping by expecting to be attached directly to your
 network and using named volumes.
 
