@@ -7,6 +7,5 @@
 #
 
 pg_ctlcluster 10 main start
-su postgres -c 'createuser unifi-protect -d'
-unifi-protect 2>&1 | grep -v '^Unknown QEMU_IFLA_INFO_KIND'
+unifi-protect
 pg_ctlcluster 10 main stop
