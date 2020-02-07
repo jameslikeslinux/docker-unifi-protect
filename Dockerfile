@@ -10,7 +10,7 @@ RUN apt-get update \
  && apt-get install -y wget
 
 # Install unifi-protect and its dependencies
-RUN wget --progress=dot:mega https://apt.ubnt.com/pool/beta/u/unifi-protect/unifi-protect.jessie~stretch~xenial~bionic_amd64.v1.12.5.deb -O unifi-protect.deb \
+RUN wget --progress=dot:mega https://apt.ubnt.com/pool/main/u/unifi-protect/unifi-protect.jessie~stretch~xenial~bionic_arm64.v1.12.5.deb -O unifi-protect.deb \
  && apt install -y ./unifi-protect.deb \
  && rm -f unifi-protect.deb
 
